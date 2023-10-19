@@ -4,6 +4,7 @@ import { TiledMapResource } from '@excaliburjs/plugin-tiled';
 import { pathsPlainObject } from '../assets/maps/maps';
 
 // collect maps from folders
+//trig
 
 const maps = Object.entries(pathsPlainObject).reduce((acc, [key, value]) => {
   const resource = new TiledMapResource(value);
