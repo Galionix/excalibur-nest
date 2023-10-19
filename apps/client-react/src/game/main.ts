@@ -86,10 +86,10 @@ export function loadLevel({
   x?: number;
   y?: number;
 }) {
-  console.log({
-    x,
-    y,
-  });
+  // console.log({
+  //   x,
+  //   y,
+  // });
   game.currentScene?.clear();
   game.goToScene(name);
   const objects = Resources[name].data.getObjectLayerByName('objects');
@@ -143,7 +143,7 @@ export function loadLevel({
 
   new NetworkActorsMap(game);
   const client = new NetworkClient(game);
-  // console.log("client: ", client);
+  //
   // When one of my nodes updates, send it to all peers
   game.on(ENetworkEvent.EVENT_SEND_PLAYER_UPDATE, (update) => {
     if (typeof update !== 'string') throw new Error('update is not a string');

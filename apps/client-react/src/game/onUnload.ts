@@ -25,7 +25,7 @@ export class SyncServer {
   }
 
   isChanged() {
-    console.log('this.prevSentValues: ', this.prevSentValues);
+
     if (!this.prevSentValues) return true;
     const {
       pos: { x, y },
