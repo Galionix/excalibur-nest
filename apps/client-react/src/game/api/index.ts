@@ -4,7 +4,8 @@ import { TTEMPORARYUserData } from '../classes/Authorization';
 import { currentAuth } from '../main';
 
 export const api = axios.create({
-  baseURL: "http://localhost:3002/api",
+  // baseURL: "http://localhost:3002/api",
+  baseURL: 'https://bounty-rpg-monorepo.onrender.com:3002/api',
   //   withCredentials: true,
 });
 
