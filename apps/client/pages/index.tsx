@@ -1,5 +1,6 @@
 import styles from './index.module.scss';
-
+import { lib } from '@excalibur-nest/lib';
+console.log(lib());
 export function Index() {
   /*
    * Replace the elements below with your own.
