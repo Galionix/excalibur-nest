@@ -7,8 +7,7 @@
     "client:start": "nx run client-react:build && nx run client-react:serve",
     "vercel-build": "nx run client-react:build --skip-nx-cache",
     "server:start:dev": "nx run server:serve",
-    "server:start": "nx run server:build && nx run server:serve",
-    "server:start2": "nx run server:build && nx run server:serve"
+    "server:start": "nx run server:build && nx run server:serve"
   },
   "private": true,
   "devDependencies": {
