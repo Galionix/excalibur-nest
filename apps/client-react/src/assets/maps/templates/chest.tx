@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="chest" type="BoxCollider" width="62.6667" height="58.6667">
+  <properties>
+   <property name="chestId" value="1"/>
+   <property name="itemIds" value="1,2,3"/>
+   <property name="itemSetId" value="1"/>
+  </properties>
+ </object>
+</template>

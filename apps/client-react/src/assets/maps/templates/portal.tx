@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="portal" type="BoxCollider" width="64" height="64">
+  <properties>
+   <property name="destination" value=""/>
+   <property name="entry" value="1"/>
+   <property name="excalibur" value="true"/>
+  </properties>
+ </object>
+</template>

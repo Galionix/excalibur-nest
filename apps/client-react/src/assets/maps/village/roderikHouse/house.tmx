@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="7">
+ <tileset firstgid="1" source="../../general.tsj"/>
+ <layer id="1" name="floor" width="50" height="50">
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJsUDALhMAAAASwAAACQAAAAjxwAAAMjvAAAA8Eyo8DXW0EtlmAMS+H8Jgf+1GbvOAf0Yr9ZLR+1qV+vrvnSVrnTKrnarbu1Lr+hKp+7UrurLvvRKZ+nUruzWChu05pQM1rlDC9ayl47aqV3Vl33pKZ0K+hIaYEaytwNJAQ==
+  </data>
+ </layer>
+ <objectgroup id="3" name="objects">
+  <object id="1" name="portal" type="BoxCollider" x="768" y="316" width="64" height="64">
+   <properties>
+    <property name="destination" value="VillageRoderikHouseBasement"/>
+    <property name="entry" value="1"/>
+    <property name="excalibur" value="true"/>
+   </properties>
+  </object>
+  <object id="2" name="player" type="Player" x="814" y="782">
+   <point/>
+  </object>
+  <object id="3" name="entry" type="Entry" x="800" y="454">
+   <properties>
+    <property name="id" value="1"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="4" name="camera" type="Camera" x="822" y="790">
+   <point/>
+  </object>
+  <object id="5" name="portal" type="BoxCollider" x="770" y="1216" width="64" height="64">
+   <properties>
+    <property name="destination" value="VillageVillageCenter"/>
+    <property name="entry" value="1"/>
+    <property name="excalibur" value="true"/>
+   </properties>
+  </object>
+  <object id="6" name="entry" type="Entry" x="792" y="1140">
+   <properties>
+    <property name="id" value="2"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="2" name="walls" width="50" height="50">
+  <properties>
+   <property name="Solid" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJg0CAFgAJQAAACZNAAAAThegwJcHAIO5dHGl+yu0QymxGTVoh1JiM+oYfUnak6YE1sipRDuQQQB7lqgO5Qhhcy79/LAF
+  </data>
+ </layer>
+</map>

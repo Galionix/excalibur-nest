@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "client:start:dev": "nx run client:serve",
-    "client:start": "nx run client:build && nx run client:serve",
+    "client:start:dev": "nx run client-react:serve",
+    "client:start": "nx run client-react:build && nx run client-react:serve",
     "server:start:dev": "nx run server:serve",
     "server:start": "nx run server:build && nx run server:serve"
   },
@@ -61,6 +61,7 @@
     "url-loader": "^4.1.1"
   },
   "dependencies": {
+    "@excaliburjs/plugin-tiled": "^0.28.0",
     "@nestjs/bull": "^10.0.1",
     "@nestjs/common": "^10.0.2",
     "@nestjs/config": "^3.1.1",
@@ -71,8 +72,11 @@
     "@nestjs/typeorm": "^10.0.0",
     "@swc/helpers": "~0.5.2",
     "axios": "^1.0.0",
+    "excalibur": "^0.28.1",
+    "firebase": "^10.5.0",
     "next": "13.4.1",
     "peer": "^1.0.1",
+    "peerjs": "^1.5.1",
     "pg": "^8.11.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

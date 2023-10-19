@@ -1,0 +1,103 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "village/roderikHouse/basement.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "templates",
+        "village",
+        "village/roderikHouse"
+    ],
+    "fileStates": {
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "P:/projects/monos/games/workspaces/client/assets/tileset.tsj": {
+            "scaleInDock": 1
+        },
+        "P:/projects/monos/games/workspaces/client/tileset.tsj": {
+            "scaleInDock": 1
+        },
+        "general.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tileset.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "village/roderikHouse/assets/maps/tileset.tsj": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "village/roderikHouse/basement.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1133.3333333333335,
+                "y": 698.6666666666667
+            }
+        },
+        "village/roderikHouse/basement.tmx#tileset": {
+            "scaleInDock": 1
+        },
+        "village/roderikHouse/house.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 796,
+                "y": 762
+            }
+        },
+        "village/roderikHouse/house.tmx#tileset": {
+            "scaleInDock": 1
+        },
+        "village/roderikHouse/tileset.tsj": {
+            "scaleInDock": 1
+        },
+        "village/tileset.tsj": {
+            "scaleInDock": 1
+        },
+        "village/villageCenter.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 2158.6666666666665,
+                "y": 2302.6666666666665
+            }
+        }
+    },
+    "last.imagePath": "P:/projects/monos/games/workspaces/client/assets",
+    "last.objectTemplatePath": "P:/projects/monos/games/workspaces/client/assets/maps/templates",
+    "map.fixedSize": true,
+    "map.height": 150,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.width": 150,
+    "openFiles": [
+        "village/roderikHouse/basement.tmx",
+        "village/roderikHouse/house.tmx"
+    ],
+    "project": "bounty-rpg.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "village/roderikHouse/basement.tmx",
+        "village/roderikHouse/house.tmx",
+        "tileset.tsj",
+        "general.tsj"
+    ],
+    "tileset.embedInMap": false,
+    "tileset.lastUsedFormat": "json"
+}

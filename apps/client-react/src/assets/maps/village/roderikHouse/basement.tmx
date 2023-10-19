@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="6">
+ <tileset firstgid="1" source="../../general.tsj"/>
+ <layer id="1" name="floor" width="50" height="50">
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJm0EALhMAAAASwAAACQAAAAjxwAAAMjvAAAA8GSo8DXW8JXNEvj//yEEBuQR3g9daBfahXahXWhfaBfahXahXWgXdhfahXahXWgX2hfahXahXWgX2oXdhXYQBCI6qTROASk6ym6lv+yX3aKv2Cv3y27RX/bL3aK/2Kv7ZbfoX/ar3aJf7NX9iu5LAiBT9raTKQ==
+  </data>
+ </layer>
+ <objectgroup id="2" name="objects">
+  <properties>
+   <property name="excalibur" value="true"/>
+  </properties>
+  <object id="1" name="player" type="Player" x="550.091" y="830.425">
+   <point/>
+  </object>
+  <object id="2" name="camera" type="Camera" x="550.653" y="832.352">
+   <point/>
+  </object>
+  <object id="3" name="portal" type="BoxCollider" x="309.091" y="796.97" width="64" height="64">
+   <properties>
+    <property name="CollisionType" value="Passive"/>
+    <property name="destination" value="VillageRoderikHouseHouse"/>
+    <property name="entry" value="1"/>
+    <property name="excalibur" value="true"/>
+   </properties>
+  </object>
+  <object id="4" name="entry" type="Entry" x="481.273" y="826.667">
+   <properties>
+    <property name="id" value="1"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="3" name="walls" width="50" height="50">
+  <properties>
+   <property name="Solid" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zstd">
+   KLUv/WAQJg0CAFgAJQAAACZNAAAATheowJcHcMPaHBD+XxH+t6SXpAO92zT7lvWmbajc1i006+3tqNSexEmNSK/htkNwb4V+iG4B
+  </data>
+ </layer>
+</map>
