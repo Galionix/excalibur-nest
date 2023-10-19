@@ -82,10 +82,10 @@ export class NetworkClient {
     this.peer = new Peer(
       this.peerId,
       {
-        host: 'localhost',
-        key: 'demodemo',
-        port: 9010,
-        path: '/myapp',
+        // host: 'localhost',
+        // key: 'demodemo',
+        // port: 9010,
+        path: '/bounty-rpg-dimasss',
       }
       // isLocalMode ? LOCALHOST_CONFIG : NETLIFY_CONFIG,
     );
