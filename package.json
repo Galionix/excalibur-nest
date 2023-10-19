@@ -5,6 +5,7 @@
   "scripts": {
     "client:start:dev": "nx run client-react:serve",
     "client:start": "nx run client-react:build && nx run client-react:serve",
+    "vercel-build": "nx run client-react:build",
     "server:start:dev": "nx run server:serve",
     "server:start": "nx run server:build && nx run server:serve"
   },
