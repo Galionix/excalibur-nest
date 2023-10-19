@@ -39,32 +39,42 @@ import { AppService } from './app.service';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         redis: {
-          host: configService.get("BULL_REDIS_HOST"),
-          port: configService.get("BULL_REDIS_PORT"),
+          host: configService.get('BULL_REDIS_HOST'),
+          port: configService.get('BULL_REDIS_PORT'),
         },
       }),
     }),
 
     BullModule.registerQueue({
-      name: "posts-queue",
+      name: 'posts-queue',
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: async (config: ConfigService) => ({
-        // postgres because generic typeorm driver doesn't support Aurora Data API
-        type: config.get<"postgres">("TYPEORM_CONNECTION"),
-        host: config.get<string>("API_HOST"),
-        port: config.get<number>("TYPEORM_PORT"),
-        username: config.get<string>("TYPEORM_USERNAME"),
-        password: config.get<string>("TYPEORM_PASSWORD"),
-        database: config.get<string>("TYPEORM_DATABASE"),
-        entities: [User],
-        synchronize: true,
-        // dropSchema: true,
-        autoLoadEntities: true,
-        // logging: true,
-      }),
+      useFactory: async (config: ConfigService) => {
+        const res = {
+          ssl: true,
+          // postgres because generic typeorm driver doesn't support Aurora Data API
+          type: config.get<'postgres'>('TYPEORM_CONNECTION'),
+          host: config.get<string>('API_HOST'),
+          port: config.get<number>('TYPEORM_PORT'),
+          username: config.get<string>('TYPEORM_USERNAME'),
+          password: config.get<string>('TYPEORM_PASSWORD'),
+          database: config.get<string>('TYPEORM_DATABASE'),
+          entities: [User],
+          synchronize: true,
+          // dropSchema: true,
+          autoLoadEntities: true,
+          extra: {
+            ssl: {
+              rejectUnauthorized: false,
+            },
+          },
+          // logging: true,
+        };
+        console.log('res: ', res);
+        return res;
+      },
     }),
     // GraphQLModule.forRoot<ApolloDriverConfig>({
     //   driver: ApolloDriver,
@@ -81,7 +91,7 @@ import { AppService } from './app.service';
 
     // PostModule,
     ConfigModule.forRoot({
-      envFilePath: "../../.env",
+      envFilePath: '../../.env',
       isGlobal: true,
     }),
     UsersModule,
