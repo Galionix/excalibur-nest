@@ -12,22 +12,22 @@ import { ENetworkEvent } from '../events/network';
 // } from "../constants.js";
 // import { guidGenerator } from "../helpers.js";
 
-const URL = 'YOUR-PROJECT-NAME.onrender.com';
+// const URL = 'YOUR-PROJECT-NAME.onrender.com';
 
-const NETLIFY_CONFIG = {
-  host: URL,
-  key: 'demodemo',
-  port: '',
-  path: '/myapp',
-  secure: true,
-};
+// const NETLIFY_CONFIG = {
+//   host: URL,
+//   key: 'demodemo',
+//   port: '',
+//   path: '/myapp',
+//   secure: true,
+// };
 
-const LOCALHOST_CONFIG = {
-  host: 'localhost',
-  key: 'demodemo',
-  port: 9001,
-  path: '/myapp',
-};
+// const LOCALHOST_CONFIG = {
+//   host: 'localhost',
+//   key: 'demodemo',
+//   port: 9001,
+//   path: '/myapp',
+// };
 
 const urlParams = new URLSearchParams(window.location.search);
 const isLocalMode = urlParams.get('local');
@@ -82,10 +82,10 @@ export class NetworkClient {
     this.peer = new Peer(
       this.peerId,
       {
-        // host: 'localhost',
-        // key: 'demodemo',
+        host: 'https://peer-server-33ou.onrender.com',
+        // key: 'bounty-rpg-dimasss',
         // port: 9010,
-        path: '/bounty-rpg-dimasss',
+        path: '/peerjs',
       }
       // isLocalMode ? LOCALHOST_CONFIG : NETLIFY_CONFIG,
     );
@@ -162,9 +162,9 @@ export class NetworkClient {
   }
 
   async getAllPeerIds() {
-    // const useUrl = isLocalMode ? "http://localhost:9010" : `https://${URL}`;
-    const useUrl = 'http://localhost:9010';
-    const response = await fetch(`${useUrl}/myapp/demodemo/peers`);
+    // const useUrl = isLocalMode ? "http://localhost:9010" : `https://${URL}`;https://peer-server-33ou.onrender.com/peerjs
+    const useUrl = 'https://peer-server-33ou.onrender.com';
+    const response = await fetch(`${useUrl}/peerjs/peers`);
     const peersArray = (await response.json()) as string[];
     const list = peersArray ?? [];
     return list.filter((id) => id !== this.peerId);
