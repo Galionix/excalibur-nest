@@ -84,9 +84,9 @@ export class NetworkClient {
       {
         host: 'peer-server-33ou.onrender.com',
         // key: 'bounty-rpg-dimasss',
-        port: 10000,
+        // port: 10000,
         secure: true,
-        path: 'peerjs',
+        // path: 'peerjs',
       }
       // isLocalMode ? LOCALHOST_CONFIG : NETLIFY_CONFIG,
     );
