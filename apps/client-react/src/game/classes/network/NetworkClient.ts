@@ -82,10 +82,11 @@ export class NetworkClient {
     this.peer = new Peer(
       this.peerId,
       {
-        host: 'https://peer-server-33ou.onrender.com',
+        host: 'peer-server-33ou.onrender.com',
         // key: 'bounty-rpg-dimasss',
-        // port: 9010,
-        path: '/peerjs',
+        port: 10000,
+        secure: true,
+        path: 'peerjs',
       }
       // isLocalMode ? LOCALHOST_CONFIG : NETLIFY_CONFIG,
     );
