@@ -91,6 +91,7 @@ export function loadLevel({
   //   y,
   // });
   game.currentScene?.clear();
+  // game.currentScene.mapN
   game.goToScene(name);
   const objects = Resources[name].data.getObjectLayerByName('objects');
   const chests = objects.getObjectsByName('chest');
@@ -138,17 +139,17 @@ export function loadLevel({
     onWindowUnload({
       player: playerActor,
     });
+
+    new NetworkActorsMap(game, playerActor);
+    const client = new NetworkClient(game);
+    //
+    // When one of my nodes updates, send it to all peers
+    game.on(ENetworkEvent.EVENT_SEND_PLAYER_UPDATE, (update) => {
+      if (typeof update !== 'string') throw new Error('update is not a string');
+      client.sendUpdate(update);
+    });
   }
   Resources[name].addTiledMapToScene(game.currentScene);
-
-  new NetworkActorsMap(game);
-  const client = new NetworkClient(game);
-  //
-  // When one of my nodes updates, send it to all peers
-  game.on(ENetworkEvent.EVENT_SEND_PLAYER_UPDATE, (update) => {
-    if (typeof update !== 'string') throw new Error('update is not a string');
-    client.sendUpdate(update);
-  });
 }
 
 // if (!user) {

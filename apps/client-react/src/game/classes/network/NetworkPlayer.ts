@@ -1,6 +1,7 @@
 import { Actor, Engine } from 'excalibur';
 
 import { Resources } from '../../resources';
+import { TMapNames } from '../../../assets/maps/maps';
 
 export class NetworkPlayer extends Actor {
   // Convert a network update to friendly values for this actor
@@ -64,5 +65,5 @@ export type TUpdate = {
   isInPain: boolean;
   isPainFlashing: boolean;
   skinId: string;
-  actionType: string;
+  mapName: TMapNames;
 };

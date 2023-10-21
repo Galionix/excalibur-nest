@@ -10,12 +10,16 @@ import { Engine } from 'excalibur';
 
 import { ENetworkEvent } from '../events/network';
 import { NetworkPlayer } from './NetworkPlayer';
+import { Player } from '../../actors/player/player';
+import { TMapNames } from '../../../assets/maps/maps';
 
 // Manages Actors that display state of other connected Players
 export class NetworkActorsMap {
   engine: Engine;
   playerMap: Map<string, NetworkPlayer>;
-  constructor(engine: Engine) {
+  mapName: TMapNames;
+  constructor(engine: Engine, playerActor: Player) {
+    this.mapName = playerActor.mapName;
     this.engine = engine;
     this.playerMap = new Map();
 
@@ -39,7 +43,7 @@ export class NetworkActorsMap {
   onUpdatedPlayer(id: string, content: any) {
     // Decode what was sent here
     const [
-      actionType,
+      mapName,
       x,
       y,
       velX,
@@ -49,9 +53,10 @@ export class NetworkActorsMap {
       isInPain,
       isPainFlashing,
     ] = content.split('|');
+    console.log('mapName: ', mapName);
 
     const stateUpdate = {
-      actionType,
+      mapName,
       x: Number(x),
       y: Number(y),
       skinId,
@@ -66,16 +71,15 @@ export class NetworkActorsMap {
     // }
 
     let otherPlayerActor = this.playerMap.get(id);
-    if (!otherPlayerActor) {
+    if (!otherPlayerActor && stateUpdate.mapName === this.mapName) {
       otherPlayerActor = new NetworkPlayer({
         x: stateUpdate.x,
         y: stateUpdate.y,
       });
       this.playerMap.set(id, otherPlayerActor);
       this.engine.add(otherPlayerActor);
+      otherPlayerActor.onStateUpdate(stateUpdate);
     }
-
-    otherPlayerActor.onStateUpdate(stateUpdate);
   }
 
   // Called when this id disconnects

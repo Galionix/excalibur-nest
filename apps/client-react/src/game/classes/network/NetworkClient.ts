@@ -80,7 +80,7 @@ export class NetworkClient {
 
   async init() {
     this.peer = new Peer(
-      this.peerId,
+      // this.peerId,
       {
         host: 'peer-server-33ou.onrender.com',
         // key: 'bounty-rpg-dimasss',
